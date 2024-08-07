@@ -51,13 +51,15 @@ function deleteItem(index) {
 function clearDB() {
     db = [];
     updateTable();
-}
-
-// Função para limpar o banco de dados com senha
-function clearDBWithPassword() {
+  }
+  
+  // Função para limpar o banco de dados com senha
+  function clearDBWithPassword() {
     const password = prompt('Digite a senha para limpar o banco de dados:');
     if (password === 'Hellan77') {
-      clearDB();
+      if (confirm('Você tem certeza que deseja limpar o banco de dados?')) {
+        clearDB();
+      }
     } else {
       alert('Senha incorreta!');
     }
