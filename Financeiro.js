@@ -59,10 +59,13 @@ function clearDB() {
     if (password === 'Hellan77') {
       if (confirm('Você tem certeza que deseja limpar o banco de dados?')) {
         clearDB();
+      } else {
+        // Se o usuário cancelar, não faça nada
+        return;
       }
     } else {
       alert('Senha incorreta!');
-      return; // Adicionei essa linha para parar a execução da função aqui
+      clearDBWithPassword(); // Chame a função novamente para que o usuário possa tentar novamente
     }
   }
 
