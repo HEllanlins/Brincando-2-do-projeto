@@ -48,10 +48,15 @@ function deleteItem(index) {
 }
 
 // Função para limpar o banco de dados
-function clearDB() {
-  db = [];
-  updateTable();
-}
+// Função para limpar o banco de dados com senha
+function clearDBWithPassword() {
+    const password = prompt('Digite a senha para limpar o banco de dados:');
+    if (password === 'Hellan77') {
+      clearDB();
+    } else {
+      alert('Senha incorreta!');
+    }
+  }
 
 // Adicionar evento de click ao botão de incluir
 document.getElementById('btnNew').addEventListener('click', () => {
@@ -62,3 +67,6 @@ document.getElementById('btnNew').addEventListener('click', () => {
   document.getElementById('desc').value = '';
   document.getElementById('amount').value = '';
 });
+
+// Adicionar evento de click ao botão de limpar
+document.getElementById('btnClear').addEventListener('click', clearDBWithPassword);
