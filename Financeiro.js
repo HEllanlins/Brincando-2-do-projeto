@@ -62,6 +62,7 @@ function clearDB() {
       }
     } else {
       alert('Senha incorreta!');
+      return; // Adicionei essa linha para parar a execução da função aqui
     }
   }
 
