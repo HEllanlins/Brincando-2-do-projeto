@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/b3770106cb.js" crossorigin="anonymous"></script>
+
+  
+
+  <title>SGD - Financeiro</title>
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Estilo customizado -->
+  <link rel="stylesheet" href="financeiro.css">
+
+</head>
+
+<body class="bg-light">
+  <header><!-- Início do Cabeçalho -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-primary">
+      <div class="container">
+        <a href="home.html" class="navbar-brand">
+          <img src="LOGO/LOGO.png" width="95">
+        </a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="nav-principal">
+          <ul class="navbar-nav">
+            <!-- Icone de mensagem no cabeçalho -->
+            <li class="nav-item" style="margin-right: 10px;">
+              <a href="" class="nav-link">
+                <i class="fa-regular fa-message fa-lg text-light"></i>
+              </a>
+            </li>
+            <!-- Icone do sino no cabeçalho -->
+            <li class="nav-item" style="margin-right: 10px;">
+              <a href="" class="nav-link">
+                <i class="fa-regular fa-bell fa-lg text-light"></i>
+              </a>
+            </li>
+            <!-- Olá Usuário -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-light btn-lift dropdown-toggle" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Olá, Usuário
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"> <i class="fa-solid fa-user" style="margin-right: 10px;"></i>
+                    Perfil</a></li>
+                <li><a class="dropdown-item" href="#"> <i class="fa-solid fa-pen-to-square"
+                      style="margin-right: 10px;"></i> Minha assinatura</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#"> <i class="fa-solid fa-right-to-bracket"
+                      style="margin-right: 10px;"></i> Sair</a></li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--Inicio Menu Cabeçalho-->
+    <div class="container-fluid d-flex justify-content-start bg-white">
+      <nav class="nav">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="home.html"> <i class="fa-solid fa-house"
+                style="margin-right: 5px;"></i> <strong>Home</strong> </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="serviços.html"> <i class="fas fa-cog"
+                style="margin-right: 5px;"></i> <strong>Serviços</strong> </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="Clientes.html"> <i class="fa-solid fa-users"
+                style="margin-right: 5px;"></i> <strong>Clientes</strong> </a>
+          </li>
+          <li class="nav-item ">
+            <div class="dropdown">
+              <button class="btn btn-white dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fa-solid fa-screwdriver-wrench text-primary" style="margin-right: 5px;"></i> <span
+                  class="text-primary"><strong>Operacional</strong></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="operacionalFuncionarios.html">Funcionarios</a></li>
+                <li><a class="dropdown-item" href="operacionalVeiculos.html">Veículos</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="estoque.html"> <i class="fa-solid fa-warehouse"
+                style="margin-right: 5px;"></i> <strong>Estoque</strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="financeiro.html"> <i class="fa-solid fa-dollar-sign"
+                style="margin-right: 5px;"></i> <strong>Financeiro</strong></a>
+          </li>
+        </ul>
+      </nav>
+    </div><!--Fim Menu Cabeçalho-->
+
+  </header><!-- Fim do Cabeçalho -->
+  <br><br><br>
+  <main>
+    <div class="resume">
+      <div>
+        Entradas: R$
+        <span class="incomes">0.00</span>
+      </div>
+      <div>
+        Saídas: R$
+        <span class="expenses">0.00</span>
+      </div>
+      <div>
+        Total: R$
+        <span class="total">0.00</span>
+      </div>
+    </div>
+    <div class="newItem">
+      <div class="divDesc">
+        <label for="desc">Descrição</label>
+        <input type="text" id="desc" />
+      </div>
+      <div class="divAmount">
+        <label for="amount">Valor</label>
+        <input type="number" id="amount" />
+      </div>
+      <div class="divType">
+        <label for="type">Tipo</label>
+        <select id="type">
+          <option>Entrada</option>
+          <option>Saída</option>
+        </select>
+      </div>
+      <button id="btnNew">Incluir</button>
+      <button onclick="clearDB()">Limpar Banco de Dados</button>
+    </div>
+    <div class="divTable">
+      <table>
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th class="columnAmount">Valor</th>
+            <th class="columnType">Tipo</th>
+            <th class="columnAction"></th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+  </main>  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
