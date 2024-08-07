@@ -48,6 +48,11 @@ function deleteItem(index) {
 }
 
 // Função para limpar o banco de dados
+function clearDB() {
+    db = [];
+    updateTable();
+}
+
 // Função para limpar o banco de dados com senha
 function clearDBWithPassword() {
     const password = prompt('Digite a senha para limpar o banco de dados:');
